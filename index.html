@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        .search-container {
+            margin: 20px 0;
+        }
+        #city-input {
+            padding: 10px;
+            width: 60%;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .error {
+            color: red;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .weather-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .weather-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+            <button id="location-btn">Use My Location</button>
+        </div>
+        
+        <div id="error-message" class="error"></div>
+        
+        <div id="weather-info" class="weather-container hidden">
+            <h2 id="city-name"></h2>
+            <div class="weather-details">
+                <img id="weather-icon" src="" alt="Weather icon">
+                <div id="temperature"></div>
+                <div id="condition"></div>
+                <div id="humidity"></div>
+                <div id="wind-speed"></div>
+                <div id="local-time"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scipt.js"></script>
+</body>
+</html>
